@@ -20,13 +20,17 @@ export class TasksService {
         const task = await this.taskModel.findById(id).exec();
         if (!task) {
             throw new NotFoundException(`Task with ID ${id} not found`);
-        }}
+        }
+        return task;
+    }
 
     async update(id: string, data: Partial<Task>): Promise<Task> {
         const task = await this.taskModel.findByIdAndUpdate(id, data, { new: true });   
         if (!task) {
             throw new NotFoundException(`Task with ID ${id} not found`);
-        }}
+        }        
+        return task;
+    }
 
     async delete(id: string): Promise<void> {
         const task = await this.taskModel.findByIdAndDelete(id).exec();
