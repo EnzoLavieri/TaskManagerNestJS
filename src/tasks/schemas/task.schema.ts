@@ -20,3 +20,5 @@ export class Task {
   @Prop({ default: Date.now })
   updatedAt: Date;
 }
+
+export const TaskSchema = SchemaFactory.createForClass(Task);
