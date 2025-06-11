@@ -33,13 +33,13 @@ npm install
 npm run start:dev
 ```
 
-# 📬 Rotas
-### 📘 Book Service - `http://localhost:3000`
+# 📘 Rotas
+###  `http://localhost:3000`
 
 | Método | Rota                | Descrição                                      |
 |--------|---------------------|------------------------------------------------|
 | POST   | `/tasks`            | Cria um nova task nova                         |
 | GET    | `/tasks`            | Lista todas as tasks                           |
-| GET    | `/tasks/:isbn`      | Busca uma task por id do mongo                 |
-| PUT    | `/tasks/:isbn`      | Atualiza os dados de uma task especifica       |
+| GET    | `/tasks/:id`      | Busca uma task por id do mongo                 |
+| PUT    | `/tasks/:id`      | Atualiza os dados de uma task especifica       |
 | DELETE | `/tasks/:id`        | Remove uma tasks pelo ID                       |
